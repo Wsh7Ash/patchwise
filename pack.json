@@ -1,0 +1,611 @@
+{
+  "name": "patchwise",
+  "version": "1.0.0",
+  "category": "defensive-security",
+  "license": "MIT",
+  "runtime": "Claude Code, opencode, or any agent runtime that loads SKILL.md files",
+  "description": "50 validated vulnerability-remediation skills for maintainers fixing reported defects: triage, containment, patching, verification, hardening and disclosure, with a finding-to-fix-plan CLI.",
+  "skill_count": 50,
+  "skills": [
+    {
+      "slug": "report-intake-normalization",
+      "title": "Report Intake Normalization",
+      "path": "skills/report-intake-normalization/SKILL.md",
+      "tags": [
+        "intake",
+        "triage",
+        "normalization"
+      ],
+      "meta_phase": "triage",
+      "sha256": "331051a149787e79fed4dbdcc6c81482e9f95081cb135aee7cf8368fa72b304a"
+    },
+    {
+      "slug": "duplicates-clustering",
+      "title": "Duplicate Clustering",
+      "path": "skills/duplicates-clustering/SKILL.md",
+      "tags": [
+        "deduplication",
+        "triage",
+        "queue"
+      ],
+      "meta_phase": "triage",
+      "sha256": "4be70f839a8fadbf2aefc04be4b4b2cfe1b5a155c2965a7433a78b3aa48aee5c"
+    },
+    {
+      "slug": "reproduction-planning",
+      "title": "Reproduction Planning",
+      "path": "skills/reproduction-planning/SKILL.md",
+      "tags": [
+        "reproduction",
+        "verification",
+        "triage"
+      ],
+      "meta_phase": "triage",
+      "sha256": "472a8358a2aa0f8662c890fc1545f894b80d151efb5aa505cf251d90ddc53c79"
+    },
+    {
+      "slug": "severity-and-exploitability-assessment",
+      "title": "Severity and Exploitability Assessment",
+      "path": "skills/severity-and-exploitability-assessment/SKILL.md",
+      "tags": [
+        "severity",
+        "risk",
+        "assessment"
+      ],
+      "meta_phase": "triage",
+      "sha256": "5ae0f3c2027570dafff1df29a4eab94cdef2d244c81cf924f453c9528320b824"
+    },
+    {
+      "slug": "scope-and-component-ownership-routing",
+      "title": "Scope and Component Ownership Routing",
+      "path": "skills/scope-and-component-ownership-routing/SKILL.md",
+      "tags": [
+        "ownership",
+        "routing",
+        "triage"
+      ],
+      "meta_phase": "triage",
+      "sha256": "1e9e54de191d7501e0c203f5772b0b5e67c0d8cbe5badf1e3099d96721179a85"
+    },
+    {
+      "slug": "confidence-and-false-positive-weighing",
+      "title": "Confidence and False-Positive Weighing",
+      "path": "skills/confidence-and-false-positive-weighing/SKILL.md",
+      "tags": [
+        "confidence",
+        "false-positive",
+        "triage"
+      ],
+      "meta_phase": "triage",
+      "sha256": "2ddd886de4ada4191ccf785ef2196591f62995177b643044fb1660d732bcb112"
+    },
+    {
+      "slug": "reporter-clarification-loop",
+      "title": "Reporter Clarification Loop",
+      "path": "skills/reporter-clarification-loop/SKILL.md",
+      "tags": [
+        "reporter",
+        "communication",
+        "triage"
+      ],
+      "meta_phase": "triage",
+      "sha256": "0b1018806bab82ddc20353e0d678c192cd2d2a3689c3a725867526870e3eb8a8"
+    },
+    {
+      "slug": "cwe-and-capec-mapping",
+      "title": "CWE and CAPEC Mapping",
+      "path": "skills/cwe-and-capec-mapping/SKILL.md",
+      "tags": [
+        "taxonomy",
+        "cwe",
+        "metrics"
+      ],
+      "meta_phase": "triage",
+      "sha256": "7f3fff352c47cf2aac765c0564a1d74c70f60a73a3191a7f96ce463dc2f3dd09"
+    },
+    {
+      "slug": "reproduction-escalation-criteria",
+      "title": "Reproduction Escalation Criteria",
+      "path": "skills/reproduction-escalation-criteria/SKILL.md",
+      "tags": [
+        "escalation",
+        "environment",
+        "triage"
+      ],
+      "meta_phase": "triage",
+      "sha256": "b90a3883a2b13bc29e242b32477029a6a4de5e821e01f501c8238b3d80383ada"
+    },
+    {
+      "slug": "blast-radius-containment-mapping",
+      "title": "Blast-Radius Containment Mapping",
+      "path": "skills/blast-radius-containment-mapping/SKILL.md",
+      "tags": [
+        "containment",
+        "blast-radius",
+        "interim"
+      ],
+      "meta_phase": "contain",
+      "sha256": "9db3e61df67eb0db8f00033daf0b689128a6b4c8a9652fd755b520f38bc55e16"
+    },
+    {
+      "slug": "credential-and-token-invalidation",
+      "title": "Credential and Token Invalidation",
+      "path": "skills/credential-and-token-invalidation/SKILL.md",
+      "tags": [
+        "sessions",
+        "tokens",
+        "invalidation"
+      ],
+      "meta_phase": "contain",
+      "sha256": "3afaf2f272d00e9cb8624997231b421a9ae54d2f0023b56ad609081482cb7ead"
+    },
+    {
+      "slug": "data-exposure-containment",
+      "title": "Data Exposure Containment",
+      "path": "skills/data-exposure-containment/SKILL.md",
+      "tags": [
+        "exposure",
+        "containment",
+        "logs"
+      ],
+      "meta_phase": "contain",
+      "sha256": "78d4bb58efb1268dd83be6b36afa8c66cb264135e629a091d9ba24912eb87387"
+    },
+    {
+      "slug": "dependency-and-supply-chain-freeze",
+      "title": "Dependency and Supply Chain Freeze",
+      "path": "skills/dependency-and-supply-chain-freeze/SKILL.md",
+      "tags": [
+        "dependencies",
+        "supply-chain",
+        "containment"
+      ],
+      "meta_phase": "contain",
+      "sha256": "99e3f19a0066e9fb2eab66a6348738baf35bbdd0eb506c18047925986878b395"
+    },
+    {
+      "slug": "emergency-release-train-timing",
+      "title": "Emergency Release Train Timing",
+      "path": "skills/emergency-release-train-timing/SKILL.md",
+      "tags": [
+        "release",
+        "emergency",
+        "process"
+      ],
+      "meta_phase": "contain",
+      "sha256": "d433b9e5dc9f511591adcf12fe4a9ba0239b8ace53b1be4a062760a2f8708ce3"
+    },
+    {
+      "slug": "kill-switch-exposure-shutoff",
+      "title": "Kill-Switch Exposure Shutoff",
+      "path": "skills/kill-switch-exposure-shutoff/SKILL.md",
+      "tags": [
+        "kill-switch",
+        "feature-flag",
+        "containment"
+      ],
+      "meta_phase": "contain",
+      "sha256": "1fe1ca2527b2b987532a8a76352878f38476eba11fc856b0f35483b061029e31"
+    },
+    {
+      "slug": "credential-rotation-ordering",
+      "title": "Credential Rotation Ordering",
+      "path": "skills/credential-rotation-ordering/SKILL.md",
+      "tags": [
+        "rotation",
+        "credentials",
+        "ordering"
+      ],
+      "meta_phase": "contain",
+      "sha256": "cec2490d700f4104b7cf75f673999f99513a33431cba84fc1167b272e704c5aa"
+    },
+    {
+      "slug": "third-party-notice-hold",
+      "title": "Third-Party Notice Hold",
+      "path": "skills/third-party-notice-hold/SKILL.md",
+      "tags": [
+        "disclosure",
+        "notification",
+        "containment"
+      ],
+      "meta_phase": "contain",
+      "sha256": "9c651c50321202b9fcecf9b979ceaff0db43469a16c895d874ffd8c2ce4192b8"
+    },
+    {
+      "slug": "regression-safety-mesh-for-fixes",
+      "title": "Regression Safety Mesh for Fixes",
+      "path": "skills/regression-safety-mesh-for-fixes/SKILL.md",
+      "tags": [
+        "tests",
+        "regression",
+        "fix"
+      ],
+      "meta_phase": "fix",
+      "sha256": "1c2d2b9e9d8eb4e3b82c66b5343cbbc8de11b6934aae561ab29b94b9f0f8ff57"
+    },
+    {
+      "slug": "minimal-fix-boundary-defining",
+      "title": "Minimal Fix Boundary Defining",
+      "path": "skills/minimal-fix-boundary-defining/SKILL.md",
+      "tags": [
+        "fix",
+        "scope",
+        "minimal-change"
+      ],
+      "meta_phase": "fix",
+      "sha256": "3188b45d51392d1953913432013eefdae5771647ecf723220b10df73cef2c4e9"
+    },
+    {
+      "slug": "defense-in-depth-follow-up",
+      "title": "Defense-in-Depth Follow-Up",
+      "path": "skills/defense-in-depth-follow-up/SKILL.md",
+      "tags": [
+        "defense-in-depth",
+        "hardening",
+        "fix"
+      ],
+      "meta_phase": "fix",
+      "sha256": "6c1a0e326ce784a70625fb1bc363176d308eea14936f1de1e5ad357d8f2ded02"
+    },
+    {
+      "slug": "fix-review-checklist",
+      "title": "Fix Review Checklist",
+      "path": "skills/fix-review-checklist/SKILL.md",
+      "tags": [
+        "review",
+        "checklist",
+        "fix"
+      ],
+      "meta_phase": "fix",
+      "sha256": "17fe5043d79f95f15bcf96abc646f34e0ca4ba1e0f4a94b054335774326eb473"
+    },
+    {
+      "slug": "shared-invariant-backfill",
+      "title": "Shared Invariant Backfill",
+      "path": "skills/shared-invariant-backfill/SKILL.md",
+      "tags": [
+        "data",
+        "backfill",
+        "migrations"
+      ],
+      "meta_phase": "fix",
+      "sha256": "e9f304ed5f916ed5bdad5089e06430a8514edbdfc942b005c63578d339c015f2"
+    },
+    {
+      "slug": "cross-surface-fix-propagation",
+      "title": "Cross-Surface Fix Propagation",
+      "path": "skills/cross-surface-fix-propagation/SKILL.md",
+      "tags": [
+        "propagation",
+        "consistency",
+        "fix"
+      ],
+      "meta_phase": "fix",
+      "sha256": "e173ea334179c723a6f66efb2208f9ce7edb12f6a791ad801baf5f308c2668f5"
+    },
+    {
+      "slug": "upstream-dependency-fix-priority",
+      "title": "Upstream Dependency Fix Priority",
+      "path": "skills/upstream-dependency-fix-priority/SKILL.md",
+      "tags": [
+        "dependencies",
+        "upgrade",
+        "pinning"
+      ],
+      "meta_phase": "fix",
+      "sha256": "228ca83fe899bf07085a7cd4d1f406e4e6cd57d43febc1dbdebd20e688b61820"
+    },
+    {
+      "slug": "fix-pull-request-package",
+      "title": "Fix Pull Request Package",
+      "path": "skills/fix-pull-request-package/SKILL.md",
+      "tags": [
+        "pull-request",
+        "review",
+        "process"
+      ],
+      "meta_phase": "fix",
+      "sha256": "19e2181e26c5511983b25556b2a9f6d58bd29a4ab324d6e6f4d28076d750fb72"
+    },
+    {
+      "slug": "fix-branch-nocturne-unification",
+      "title": "Fix Branch and Release Channel Unification",
+      "path": "skills/fix-branch-nocturne-unification/SKILL.md",
+      "tags": [
+        "channels",
+        "branches",
+        "releases"
+      ],
+      "meta_phase": "fix",
+      "sha256": "aeaa42f89546bb57cef7d2a11e9ad70dd0a384984e3d148aead316e83f1134de"
+    },
+    {
+      "slug": "post-deploy-observation-sweep",
+      "title": "Post-Deploy Observation Sweep",
+      "path": "skills/post-deploy-observation-sweep/SKILL.md",
+      "tags": [
+        "monitoring",
+        "verification",
+        "deployment"
+      ],
+      "meta_phase": "verify",
+      "sha256": "34fac2307c9d43b5b903ae862f9ccd503d64d8496c5a3e81dde9ca4b74d3ce3c"
+    },
+    {
+      "slug": "fix-effectiveness-verification",
+      "title": "Fix Effectiveness Verification",
+      "path": "skills/fix-effectiveness-verification/SKILL.md",
+      "tags": [
+        "verification",
+        "reproduction",
+        "closure"
+      ],
+      "meta_phase": "verify",
+      "sha256": "919e87282e5cbdd5b2a8d4862b7c91ffc99efb71f1d4e12314f8b6156a86d5ba"
+    },
+    {
+      "slug": "adjacent-code-neighborhood-sweep",
+      "title": "Adjacent Code Neighborhood Sweep",
+      "path": "skills/adjacent-code-neighborhood-sweep/SKILL.md",
+      "tags": [
+        "sweep",
+        "pattern",
+        "hardening"
+      ],
+      "meta_phase": "verify",
+      "sha256": "05fa2a068fb1bfbec48bc2aa004faa606b899550560741442fbfe81ead8bc4a2"
+    },
+    {
+      "slug": "failure-open-vs-failure-closed-audit",
+      "title": "Failure-Open vs Failure-Closed Audit",
+      "path": "skills/failure-open-vs-failure-closed-audit/SKILL.md",
+      "tags": [
+        "fail-open",
+        "availability",
+        "audit"
+      ],
+      "meta_phase": "verify",
+      "sha256": "3798311c403c5617ee09fba43a67fe4bb6a288b9a6d683786d3cfe8375d6770c"
+    },
+    {
+      "slug": "replica-and-cache-version-sweep",
+      "title": "Replica and Cache Version Sweep",
+      "path": "skills/replica-and-cache-version-sweep/SKILL.md",
+      "tags": [
+        "rollout",
+        "replicas",
+        "fleet"
+      ],
+      "meta_phase": "verify",
+      "sha256": "aee0dc6b08eb418c189e62e6328bdd463bbf8c2495ed2a7f4bf18dba7a84f53d"
+    },
+    {
+      "slug": "regression-watch-window",
+      "title": "Regression Watch Window",
+      "path": "skills/regression-watch-window/SKILL.md",
+      "tags": [
+        "watch",
+        "window",
+        "process"
+      ],
+      "meta_phase": "verify",
+      "sha256": "78ce29e8d03d2737409759e6a82f928ab8dbaa83d3dfff36a30b679a9d342c61"
+    },
+    {
+      "slug": "fix-verification-signoff",
+      "title": "Fix Verification Signoff",
+      "path": "skills/fix-verification-signoff/SKILL.md",
+      "tags": [
+        "closure",
+        "signoff",
+        "evidence"
+      ],
+      "meta_phase": "verify",
+      "sha256": "0de05801e64000e268e4b6b45beb77102f03cba847fd71615fc805d87b5d2828"
+    },
+    {
+      "slug": "fix-loop-integrity-recheck",
+      "title": "Fix Loop Integrity Recheck",
+      "path": "skills/fix-loop-integrity-recheck/SKILL.md",
+      "tags": [
+        "recheck",
+        "archive",
+        "verification"
+      ],
+      "meta_phase": "verify",
+      "sha256": "ae60cf316e5a9870cb3ff2acf03b44e77c225b10462f858671bbfd75bb54b026"
+    },
+    {
+      "slug": "root-cause-detection-strengthening",
+      "title": "Root-Cause Detection Strengthening",
+      "path": "skills/root-cause-detection-strengthening/SKILL.md",
+      "tags": [
+        "detection",
+        "monitoring",
+        "hardening"
+      ],
+      "meta_phase": "harden",
+      "sha256": "d779144acd5d98df3af021a0bd4e643c4dbfe470fe6ce372bdd5c79036b8d79b"
+    },
+    {
+      "slug": "anti-regression-guard-rails",
+      "title": "Anti-Regression Guard Rails",
+      "path": "skills/anti-regression-guard-rails/SKILL.md",
+      "tags": [
+        "guard-rails",
+        "lint",
+        "prevention"
+      ],
+      "meta_phase": "harden",
+      "sha256": "0806e6fef93e6b3fc21ffe44170713a868a425efdd6c1e249cf9f6a51a0980bb"
+    },
+    {
+      "slug": "wave-pattern-canary-recheck",
+      "title": "Wave-Pattern Canary Recheck",
+      "path": "skills/wave-pattern-canary-recheck/SKILL.md",
+      "tags": [
+        "canary",
+        "synthetic",
+        "monitoring"
+      ],
+      "meta_phase": "harden",
+      "sha256": "6c12a6bd0b20d29135d6ab3e90c0854e926f533d45020ef2cc189ade3560fe02"
+    },
+    {
+      "slug": "playbook-capture-from-fix",
+      "title": "Playbook Capture From Fix",
+      "path": "skills/playbook-capture-from-fix/SKILL.md",
+      "tags": [
+        "playbook",
+        "runbook",
+        "process"
+      ],
+      "meta_phase": "harden",
+      "sha256": "2d41fef5b060c98a15fddb457762b1f95e18be8a481733198db9e2b5a6daac89"
+    },
+    {
+      "slug": "postmortem-blameless-write-up",
+      "title": "Blameless Postmortem Write-Up",
+      "path": "skills/postmortem-blameless-write-up/SKILL.md",
+      "tags": [
+        "postmortem",
+        "blameless",
+        "process"
+      ],
+      "meta_phase": "harden",
+      "sha256": "bf13bfe52c9c9d614e2e16132c6c4160073cd5d74de551d8de491f42c97de20e"
+    },
+    {
+      "slug": "coverage-of-defect-class-in-tests",
+      "title": "Coverage of Defect Class in Tests",
+      "path": "skills/coverage-of-defect-class-in-tests/SKILL.md",
+      "tags": [
+        "tests",
+        "coverage",
+        "hardening"
+      ],
+      "meta_phase": "harden",
+      "sha256": "f886041dc7191997653b195f6201504fb838d176aac84d048a7e5b5f4f0900b7"
+    },
+    {
+      "slug": "skills-and-training-loop",
+      "title": "Skills and Training Loop",
+      "path": "skills/skills-and-training-loop/SKILL.md",
+      "tags": [
+        "training",
+        "practices",
+        "hardening"
+      ],
+      "meta_phase": "harden",
+      "sha256": "caa31217b05d0c1691e17844a959f9f90b3eb0457a9e072faefa34dcdd00bfec"
+    },
+    {
+      "slug": "reporter-follow-up-and-thanks",
+      "title": "Reporter Follow-Up and Thanks",
+      "path": "skills/reporter-follow-up-and-thanks/SKILL.md",
+      "tags": [
+        "reporter",
+        "communication",
+        "disclosure"
+      ],
+      "meta_phase": "document",
+      "sha256": "91bf9485fc0de13e4ea9dcf164a389ad8c6d193b7a0183b2d0a403391b304a0b"
+    },
+    {
+      "slug": "disclosure-timing-and-approval",
+      "title": "Disclosure Timing and Approval",
+      "path": "skills/disclosure-timing-and-approval/SKILL.md",
+      "tags": [
+        "disclosure",
+        "timing",
+        "approval"
+      ],
+      "meta_phase": "document",
+      "sha256": "071d058361bd2f27d572ab0372bf54d79a7434f6ee9264d9c03c6d744d386dd4"
+    },
+    {
+      "slug": "release-note-authoring",
+      "title": "Release Note Authoring",
+      "path": "skills/release-note-authoring/SKILL.md",
+      "tags": [
+        "release-note",
+        "documentation",
+        "disclosure"
+      ],
+      "meta_phase": "document",
+      "sha256": "51f11b03350baac556c185619681a1a880eca220745b3e451508b821bfaccf35"
+    },
+    {
+      "slug": "internal-knowledge-base-writeback",
+      "title": "Internal Knowledge Base Writeback",
+      "path": "skills/internal-knowledge-base-writeback/SKILL.md",
+      "tags": [
+        "knowledge",
+        "documentation",
+        "writeback"
+      ],
+      "meta_phase": "document",
+      "sha256": "d297f58abe5b2d0d36323228a7424c59043530b53f385b4777c66d9048ef5e4b"
+    },
+    {
+      "slug": "defect-record-archive-and-handbook",
+      "title": "Defect Record Archive and Handbook",
+      "path": "skills/defect-record-archive-and-handbook/SKILL.md",
+      "tags": [
+        "archive",
+        "record",
+        "handbook"
+      ],
+      "meta_phase": "document",
+      "sha256": "769c5517419ea59935d4f9dd4c6b365ade8fa2509c727fc8a80e672879b5a652"
+    },
+    {
+      "slug": "access-portal-query-refusal-audit",
+      "title": "Access Portal Query Refusal Audit",
+      "path": "skills/access-portal-query-refusal-audit/SKILL.md",
+      "tags": [
+        "audit",
+        "entry-paths",
+        "verification"
+      ],
+      "meta_phase": "harden",
+      "sha256": "f01500b15849d43478016edd00e20678213ea59ab9368b0541902ce25c733a4d"
+    },
+    {
+      "slug": "maintenance-note-for-adjacent-defects",
+      "title": "Maintenance Note for Adjacent Defects",
+      "path": "skills/maintenance-note-for-adjacent-defects/SKILL.md",
+      "tags": [
+        "maintenance",
+        "documentation",
+        "linking"
+      ],
+      "meta_phase": "document",
+      "sha256": "9f5301d39a1fe1a7f8daff63e285cf22508690a55f72f97eb4dae5a6b1e2e973"
+    },
+    {
+      "slug": "adjacent-defect-sweep-followup",
+      "title": "Adjacent Defect Sweep Followup",
+      "path": "skills/adjacent-defect-sweep-followup/SKILL.md",
+      "tags": [
+        "sweep",
+        "followup",
+        "hardening"
+      ],
+      "meta_phase": "harden",
+      "sha256": "934e9c59bca6fd0f2bd5ec4be4dbf041212dc5bc6b06709f0df6547acc7ed0b0"
+    },
+    {
+      "slug": "sweep-class-vocabulary-note",
+      "title": "Sweep Class Vocabulary Note",
+      "path": "skills/sweep-class-vocabulary-note/SKILL.md",
+      "tags": [
+        "vocabulary",
+        "glossary",
+        "documentation"
+      ],
+      "meta_phase": "document",
+      "sha256": "cbf9a558649265a6ac025d9474cfb62be77b5157b6cfb2e1c08648e15bb608cb"
+    }
+  ]
+}

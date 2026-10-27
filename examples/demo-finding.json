@@ -1,0 +1,7 @@
+{
+  "title": "Cross-tenant order read via supplier-supplied identifier",
+  "category": "broken-access-control",
+  "cwe": "CWE-639",
+  "tags": ["idor", "orders", "multi-tenant", "audit-findings", "regression"],
+  "notes": "Example finding input for `patchwise fixplan --finding`. Replace with your own finding data before running against a real record."
+}
